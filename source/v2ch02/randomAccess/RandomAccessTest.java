@@ -1,4 +1,4 @@
-package v2ch02.randomAccess;
+package randomAccess;
 
 import java.io.*;
 import java.time.*;
@@ -35,7 +35,7 @@ public class RandomAccessTest
          // read employees in reverse order
          for (int i = n - 1; i >= 0; i--)
          {  
-//            newStaff[i] = new Employee();
+            newStaff[i] = new Employee();
             in.seek(i * Employee.RECORD_SIZE);
             newStaff[i] = readData(in);
          }

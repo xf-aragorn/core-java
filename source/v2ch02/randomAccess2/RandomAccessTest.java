@@ -1,4 +1,4 @@
-package v2ch02.randomAccess2;
+package randomAccess2;
 
 import java.io.*;
 import java.nio.*;
@@ -92,10 +92,9 @@ public class RandomAccessTest
       while ((ch = in.getChar()) != '\0') name.append(ch);
       in.position(2 * Employee.NAME_SIZE);
       double salary = in.getDouble();
-      int d = in.getInt();
-      int m = in.getInt();
       int y = in.getInt();
-      System.out.println("name: "+name.toString()+",salary:"+ salary+",y:"+ y +",m:"+ m+",d:"+d);
+      int m = in.getInt();
+      int d = in.getInt();
       return new Employee(name.toString(), salary, y, m, d);
    }  
 }
